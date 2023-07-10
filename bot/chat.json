@@ -1,0 +1,92 @@
+{
+  "anonymous": {
+    "start": 1,
+    "proceed_yes": 2,
+    "verify_subscribe_user_name": 3,
+    "verify_subscribe_password": 4,
+    "stop": 5,
+    "props": {
+      "1": {
+        "action": "show_welcome",
+        "triggers": ["hello", "start"],
+        "invokeAction": true,
+        "text": "Welcome to the Zambia Surveillance chatbot, a specialized service used to receive IDSR notifications through Telegram.\n\n To continue, reply with either Yes or No: \n\n Yes - I want to receive IDSR notifications. \n No - Exit",
+        "error": "Your input was not recognized.\nPlease type hello to start interacting with this chatbot."
+      },
+      "2": {
+        "action": "proceed_yes",
+        "triggers": ["yes"],
+        "invokeAction": false,
+        "text": "Please enter your DHIS2 user name.\n\n Or reply with No to Quit",
+        "error": "To continue, reply with either Yes or No: \n\n Yes - I want to receive IDSR notifications. \n No - Exit"
+      },
+      "3": {
+        "action": "verify_subscriber_user_name",
+        "triggers": [],
+        "invokeAction": true,
+        "text": "Please enter your DHIS2 password",
+        "error": "Your user name was not found. Please try again.",
+        "tag": "user_name"
+      },
+      "4": {
+        "action": "verify_subscriber_password",
+        "triggers": [],
+        "invokeAction": true,
+        "sessionTerminator": true,
+        "text": "You have successfully subscribed to recieve eIDSR notifications!\n\nFor security purposes please delete the password you have typed in the chat.",
+        "error": "Login using the credentials you provided failed.\nPlease try again.",
+        "tag": "password"
+      },
+      "5": {
+        "action": "quit_session",
+        "triggers": ["stop", "quit", "exit", "cancel", "no"],
+        "text": "The chat session has ended.\nThank you for using the Zambia Surveillance chatbot!"
+      }
+    }
+  },
+  "loggedIn": {
+    "start": 1,
+    "unsubscribe_yes": 2,
+    "verify_unsubscribe_user_name": 3,
+    "verify_unsubscribe_password": 4,
+    "stop": 5,
+    "props": {
+      "1": {
+        "action": "show_welcome",
+        "triggers": ["hello", "start"],
+        "invokeAction": true,
+        "text": "Hello {name}! \n\nWelcome back to the Zambia Surveillance chatbot.\n\n To continue, reply with either Yes or No: \n\n Yes - I want to unsubscribe from IDSR notifications. \n No - Cancel",
+        "error": "Your input was not recognized.\n\n Please type hello to start interacting with this chatbot"
+      },
+      "2": {
+        "action": "proceed_yes",
+        "triggers": ["yes"],
+        "invokeAction": false,
+        "text": "Please enter your DHIS2 user name to confirm unsubscription.\n\n Or reply with No to Cancel",
+        "error": "To continue, reply with either Yes or No: \n\n Yes - I want to unsubscribe from IDSR notifications. \n No - Cancel"
+      },
+      "3": {
+        "action": "verify_subscriber_user_name",
+        "triggers": [],
+        "invokeAction": true,
+        "text": "Please enter your DHIS2 password to confirm unsubscription.",
+        "error": "Your user name was not found. Please try again.",
+        "tag": "user_name"
+      },
+      "4": {
+        "action": "verify_unsubscribe_password",
+        "triggers": [],
+        "invokeAction": true,
+        "sessionTerminator": true,
+        "text": "You have successfully unsubscribed from recieving eIDSR notifications!\n\nFor security purposes please delete your chat history.",
+        "error": "Login using the credentials you provided failed.\nPlease try again.",
+        "tag": "password"
+      },
+      "5": {
+        "action": "quit_session",
+        "triggers": ["stop", "quit", "exit", "cancel", "no"],
+        "text": "The chat session has ended.\nThank you for using the Zambia Surveillance chatbot!"
+      }
+    }
+  }
+}

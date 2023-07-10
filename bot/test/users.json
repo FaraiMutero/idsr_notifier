@@ -1,0 +1,20 @@
+[
+  {
+    "message_id": 8,
+    "from": {
+      "id": 527300902,
+      "is_bot": false,
+      "first_name": "Farai",
+      "last_name": "Mutero",
+      "language_code": "en"
+    },
+    "chat": {
+      "id": 527300902,
+      "first_name": "Farai",
+      "last_name": "Mutero",
+      "type": "private"
+    },
+    "date": 1678397236,
+    "text": "Shamwari"
+  }
+]

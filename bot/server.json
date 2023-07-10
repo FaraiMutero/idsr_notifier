@@ -1,0 +1,243 @@
+{
+  "env": {
+    "prod": true,
+    "mode": "dev",
+    "bot": {
+      "prod":{
+        "handle": "eIDSRZambiaBot",
+        "name": "Zambia eIDSR Surveillance ChatBot",
+        "token": "6281741957:AAFlWcOrwcZkV0A0OQXPSV9C1URtYSrZHLs"
+      },
+      "dev": {
+        "handle": "@xyzabc1bot",
+        "name": "XYZABC_Staging1",
+        "token": "958232975:AAHvPwrZLrATQn8jpqrnQl8jPX-LQ_WlQHU"
+      },
+      "model": {
+        "constants": {
+          "program": 1,
+          "duplicationPrevention": 2,
+          "conditionType": 3,
+          "subscribersUserGroup": 4,
+          "devUserGroup": 5,
+          "labNotificationFilterKey": 6,
+          "orgUnitKey": 7,
+          "props": {
+            "1": { "value": "gr3uWZVzPQT" },
+            "2": { "value": "ENROLLMENT_ID" },
+            "3": { "value": "iSIhKjnlMkv" },
+            "4": { "value": "v9SiKycT0np" },
+            "5": { "value": "rDhT93j2dah" },
+            "6" : { "value": "PROGRAM_STAGE_ID"},
+            "7" : { "value": "ORG_UNIT_NAME"}
+          }
+        },
+        "notificationTypes":{
+          "priorityConditions": {
+            "priority-conditions-covid19": 1,
+            "priority-conditions-afp": 2,
+            "priority-conditions-anthrax": 3,
+            "priority-conditions-cholera": 4,
+            "priority-conditions-diarrhoea": 5,
+            "priority-conditions-monkeypox": 6,
+            "priority-conditions-cluster": 7,
+            "priority-conditions-plague": 8,
+            "priority-conditions-ahf": 9,
+            "priority-conditions-neonatal_tetanus": 10,
+            "priority-conditions-typhoid": 11,
+            "priority-conditions-meningitis": 12,
+            "priority-conditions-measles": 13,
+            "priority-conditions-ari": 14,
+            "priority-conditions-vhf": 15,
+            "priority-conditions-yellow_fever": 16,
+            "priority-conditions-zika": 17,
+            "props": {
+              "1": {
+                "template": "KFHbscgZeEh",
+                "name": "COVID-19 Alert notification",
+                "conditionType": "DU071_COVID19",
+                "userGroup": "v9SiKycT0np"
+              },
+              "2": {
+                "template": "fxDj7kBWKwD",
+                "name": "Acute Flaccid Paralysis Alert notification",
+                "conditionType": "DA850_AFP",
+                "userGroup": "v9SiKycT0np"
+              },
+              "3": {
+                "template": "v7RoqyEe0wz",
+                "name": "Anthrax Alert notification",
+                "conditionType": "DA034_ANTHRAX",
+                "userGroup": "v9SiKycT0np"
+              },
+              "4": {
+                "template": "TwU1gUoejwS",
+                "name": "Cholera Alert notification",
+                "conditionType": "DA000_CHOLERA",
+                "userGroup": "v9SiKycT0np"
+              },
+              "5": {
+                "template": "uWTM4iQRUZk",
+                "name": "Diarrhoea with blood (Shigella) Alert notification",
+                "conditionType": "DA069_DIARR_BLOOD",
+                "userGroup": "v9SiKycT0np"
+              },
+              "6": {
+                "template": "z9GYDlgiEh8",
+                "name": "Monkeypox",
+                "conditionType": "DB040_MONKEYPOX",
+                "userGroup": "v9SiKycT0np"
+              },
+              "7": {
+                "template": "BeCvngzId4a",
+                "name": "Cluster of SARI/SARS/HINI (Swine Flu) /Influenza due to new subtype",
+                "conditionType": "DJ090_SARIS",
+                "userGroup": "v9SiKycT0np"
+              },
+              "8": {
+                "template": "yw3vH8pTUHv",
+                "name": "Plague",
+                "conditionType": "DA200_PLAGUE",
+                "userGroup": "v9SiKycT0np"
+              },
+              "9": {
+                "template": "tyPHPkoqJ3T",
+                "name": "Acute Haemorrhagic Fever",
+                "conditionType": "DA910_VHF",
+                "userGroup": "v9SiKycT0np"
+              },
+              "10": {
+                "template": "j7HgQFDaPJ2",
+                "name": "Neonatal Tetanus",
+                "conditionType": "DA330_NNT",
+                "userGroup": "v9SiKycT0np"
+              },
+              "11": {
+                "template": "NAL4BEZQlYo",
+                "name": "Typhoid fever",
+                "conditionType": "DA010_TYPHOID",
+                "userGroup": "v9SiKycT0np"
+              },
+              "12": {
+                "template": "owgiOiUZVUE",
+                "name": "Bacterial Meningitis",
+                "conditionType": "DG009_BACTMENING",
+                "userGroup": "v9SiKycT0np"
+              },
+              "13": {
+                "template": "dSnYPuJ9VTM",
+                "name": "Measles",
+                "conditionType": "DB050_MEASLES",
+                "userGroup": "v9SiKycT0np"
+              },
+              "14": {
+                "template": "vuzpod063ok",
+                "name": "Acute Respiratory Illness",
+                "conditionType": "DA499_ARI",
+                "userGroup": "v9SiKycT0np"
+              },
+              "15": {
+                "template": "tyPHPkoqJ3T",
+                "name": "Acute Viral Haemorrhagic Fever",
+                "conditionType": "DA910_VHF",
+                "userGroup": "v9SiKycT0np"
+              },
+              "16": {
+                "template": "paRlx2CUZgN",
+                "name": "Yellow Fever",
+                "conditionType": "DA950_YFEVER",
+                "userGroup": "v9SiKycT0np"
+              },
+              "17": {
+                "template": "I9ekye3NIWq",
+                "name": "Zika Fever",
+                "conditionType": "DA928_ZIKA",
+                "userGroup": "v9SiKycT0np"
+              }
+            }
+          },
+          "labResults": {
+            "nmcLabResults": 1,
+            "afpLabResults": 2,
+            "props": {
+              "1" : {
+                "programStageName": "Stage 2B - Lab test results",
+                "programStageID": "mLzLxeatZRN",
+                "template": "j4qggRf6Vkk",
+                "userGroup": "v9SiKycT0np"
+              },
+              "2" : {
+                "programStageName": "",
+                "programStageID": "",
+                "template": "hw6V69dQex6",
+                "userGroup": "v9SiKycT0np"
+              }
+            }
+          }
+        }
+      }
+    },
+    "target": {
+      "uri": "https://training.dhis.hisp.org/zm-idsr/api",
+      "name": "Zambia IDSR",
+      "credentials": {
+        "token": "d2pat_YWb9rt9Fie8DklyS8IpbffOTI3Nogccd2823633364",
+        "expiry": "2023-06-19T14:48:00.000Z"
+      },
+      "endpoints": {
+        "login": 1,
+        "userGroupList": 2,
+        "userGroupSingle": 3,
+        "userSingle": 4,
+        "notificationTemplate": 5,
+        "checkUserName": 6,
+        "checkUserByTelegramID" : 7,
+        "updateUser": 8,
+        "updateUserGroup": 9,
+        "pathogenOptionSet":10,
+        "labTestResultOptionSet":11,
+        "props": {
+          "1": { "path": "/me.json" },
+          "2": { "path": "/userGroups.json" },
+          "3": {
+            "path": "/userGroups/{id}.json?fields=id,name,users[id,name]",
+            "placeholder": "{id}"
+          },
+          "4": {
+            "path": "/users/{id}.json?fields=displayName,telegram",
+            "placeholder": "{id}"
+          },
+          "5": {
+            "path": "/programNotificationTemplates/{id}.json",
+            "placeholder": "{id}"
+          },
+          "6": {
+            "path": "/users.json?filter=username:eq:{user_name}",
+            "placeholder": "{user_name}"
+          },
+          "7": {
+            "path": "/users.json?filter=telegram:eq:{telegram_id}&fields=:all",
+            "placeholder": "{telegram_id}"
+          },
+          "8": {
+            "path": "/users/{user_id}.json",
+            "placeholder": "{user_id}",
+            "payload": { "op": "replace", "path": "/telegram", "value": "" }
+          },
+          "9": {
+            "path": "/userGroups/{id}.json",
+            "placeholder": "{id}"
+          },
+          "10": {
+            "path": "/optionSets/C7WtPuK36b8.json?fields=id,name,options[id,code,name]",
+            "data": []
+          },
+          "11": {
+            "path": "/optionSets/EwcdgVh7sdS.json?fields=id,name,options[id,code,name]",
+            "data": []
+          }
+        }
+      }
+    }
+  }
+}

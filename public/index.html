@@ -1,0 +1,30 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js App</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <h1>Node.js App</h1>
+  <p>Value: <span id="value"></span></p>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    // Update the value when receiving the initial value
+    socket.on('initialValue', (value) => {
+      document.getElementById('value').textContent = value;
+    });
+
+    // Update the value when it changes
+    socket.on('updateValue', (value) => {
+      document.getElementById('value').textContent = value;
+    });
+  </script>
+</body>
+</html>
