@@ -1,6 +1,6 @@
 {
   "env": {
-    "prod": true,
+    "prod": false,
     "mode": "dev",
     "bot": {
       "prod":{
@@ -63,12 +63,12 @@
                 "conditionType": "DA850_AFP"
               },
               "3": {
-                "template": "v7RoqyEe0wz",
+                "template": "pscEZVhW5Ty",
                 "name": "Anthrax Alert notification",
                 "conditionType": "DA034_ANTHRAX"
               },
               "4": {
-                "template": "Z1c0X1dNBs9",
+                "template": "TwU1gUoejwS",
                 "name": "Cholera Alert notification",
                 "conditionType": "DA000_CHOLERA"
               },
@@ -188,7 +188,7 @@
             "placeholder": "{id}"
           },
           "4": {
-            "path": "/users/{id}.json?fields=displayName,telegram",
+            "path": "/users/{id}.json?fields=displayName,username,telegram",
             "placeholder": "{id}"
           },
           "5": {
