@@ -63,6 +63,7 @@ router.post('/', function (req, res) {
                             let userInfo = res.data
                             if (userInfo.telegram) {
                                 try {
+                                    console.log('Sent Notification to : ' + userInfo.username)
                                     bot.pushMessage(userInfo.telegram, app.draftNotification(notificationTemplate.messageTemplate, notificationInfo))
                                 }
                                 catch (err) {
@@ -80,6 +81,7 @@ router.post('/', function (req, res) {
                     for (let x = 0; x < userInfo.users.length; x++) {
                         if (userInfo.users[x].telegram){
                             try {
+                                console.log('Sent Notification to : ' + userInfo.users[x].username)
                                 bot.pushMessage(userInfo.users[x].telegram, app.draftNotification(notificationTemplate.messageTemplate, notificationInfo))
                             }
                             catch (err) {
