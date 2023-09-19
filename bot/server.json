@@ -1,6 +1,6 @@
 {
   "env": {
-    "prod": false,
+    "prod": true,
     "mode": "dev",
     "bot": {
       "prod":{
