@@ -138,9 +138,7 @@ exports.addToNotificationsQueue = function (message, template, queue) {
   }
 
   queueItem = this.updateQueueItemValues(message, template, queueItem)
-
   queueItem.notification = this.draftNotification(template, message)
-
   queue.push(queueItem)
 
   return queueItem;
@@ -230,6 +228,16 @@ exports.fetchUser = function (userID) {
   let queryUrl = server.env.target.uri + route.path;
 
   queryUrl = queryUrl.replace(route.placeholder, userID);
+
+  return axios.get(queryUrl);
+};
+
+exports.fetchOrgUnitInfo = function (orgUnitID) {
+  let route =
+    server.env.target.endpoints.props[server.env.target.endpoints.orgUnitUserInfo];
+  let queryUrl = server.env.target.uri + route.path;
+
+  queryUrl = queryUrl.replace(route.placeholder, orgUnitID);
 
   return axios.get(queryUrl);
 };

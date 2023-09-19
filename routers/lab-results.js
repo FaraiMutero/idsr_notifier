@@ -11,6 +11,12 @@ var lastTriggerID = "";
 var allowWorkflowExecution = true;
 var notificationsQueue = []
 
+router.get('/', function (req, res, next) {
+    var notificationInfo = req.body
+    console.log("A request for things received at " + Date.now());
+    res.send('You have arrived at the /api endpoint. Timestamp : ' + new Date().toISOString());
+})
+
 router.use('/', function (req, res, next) {
     var notificationInfo = req.body
     console.log("A request for things received at " + Date.now());

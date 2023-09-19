@@ -10,6 +10,12 @@ const server = require("../bot/server.json");
 var lastTriggerID = "";
 var allowWorkflowExecution = true;
 
+router.get('/', function (req, res, next) {
+    var notificationInfo = req.body
+    console.log("A request for things received at " + Date.now());
+    res.send('You have arrived at the /api endpoint. Timestamp : ' + new Date().toISOString());
+})
+
 router.use('/', function (req, res, next) {
     let notificationInfo = req.body
 
@@ -45,27 +51,44 @@ router.post('/', function (req, res) {
     if (matchedNotification != null) {
         app.fetchNotificationTemplate(matchedNotification.template).then(function (res) {
             let notificationTemplate = res.data
-            let userGroupID = (matchedNotification.userGroup == "use_default") ? notificationTemplate.recipientUserGroup : matchedNotification.userGroup;
 
-            app.fetchUserGroup(userGroupID).then(function (res) {
-                let userGroup = res.data
+            if (notificationTemplate.notificationRecipient == "USER_GROUP") {
+                app.fetchUserGroup(notificationTemplate.recipientUserGroup.id).then(function (res) {
+                    let userGroup = res.data
 
-                lastTriggerID = notificationInfo[server.env.bot.model.constants.props[server.env.bot.model.constants.duplicationPrevention].value]
+                    lastTriggerID = notificationInfo[server.env.bot.model.constants.props[server.env.bot.model.constants.duplicationPrevention].value]
 
-                for (let x = 0; x < userGroup.users.length; x++) {
-                    app.fetchUser(userGroup.users[x].id).then(function (res) {
-                        let userInfo = res.data
-                        if (userInfo.telegram) {
+                    for (let x = 0; x < userGroup.users.length; x++) {
+                        app.fetchUser(userGroup.users[x].id).then(function (res) {
+                            let userInfo = res.data
+                            if (userInfo.telegram) {
+                                try {
+                                    bot.pushMessage(userInfo.telegram, app.draftNotification(notificationTemplate.messageTemplate, notificationInfo))
+                                }
+                                catch (err) {
+                                    console.log('Error sending Telegram message to ' + userInfo.displayName + '. Further investigation required')
+                                }
+                            }
+                        })
+                    }
+                })
+            }
+            else if (notificationTemplate.notificationRecipient == "USERS_AT_ORGANISATION_UNIT") {
+                app.fetchOrgUnitInfo(notificationInfo.ENROLLMENT_ORG_UNIT_ID).then(function(res){
+                    let userInfo = res.data
+                    
+                    for (let x = 0; x < userInfo.users.length; x++) {
+                        if (userInfo.users[x].telegram){
                             try {
-                                bot.pushMessage(userInfo.telegram, app.draftNotification(notificationTemplate.messageTemplate, notificationInfo))
+                                bot.pushMessage(userInfo.users[x].telegram, app.draftNotification(notificationTemplate.messageTemplate, notificationInfo))
                             }
                             catch (err) {
                                 console.log('Error sending Telegram message to ' + userInfo.displayName + '. Further investigation required')
                             }
                         }
-                    })
-                }
-            })
+                    }
+                })
+            }
         })
         apiResponse = '{"status": "OK", "result": "Notification successfully sent"}'
     }
