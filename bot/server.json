@@ -55,104 +55,87 @@
               "1": {
                 "template": "KFHbscgZeEh",
                 "name": "COVID-19 Alert notification",
-                "conditionType": "DU071_COVID19",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DU071_COVID19"
               },
               "2": {
                 "template": "fxDj7kBWKwD",
                 "name": "Acute Flaccid Paralysis Alert notification",
-                "conditionType": "DA850_AFP",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DA850_AFP"
               },
               "3": {
                 "template": "v7RoqyEe0wz",
                 "name": "Anthrax Alert notification",
-                "conditionType": "DA034_ANTHRAX",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DA034_ANTHRAX"
               },
               "4": {
-                "template": "TwU1gUoejwS",
+                "template": "Z1c0X1dNBs9",
                 "name": "Cholera Alert notification",
-                "conditionType": "DA000_CHOLERA",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DA000_CHOLERA"
               },
               "5": {
                 "template": "uWTM4iQRUZk",
                 "name": "Diarrhoea with blood (Shigella) Alert notification",
-                "conditionType": "DA069_DIARR_BLOOD",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DA069_DIARR_BLOOD"
               },
               "6": {
                 "template": "z9GYDlgiEh8",
                 "name": "Monkeypox",
-                "conditionType": "DB040_MONKEYPOX",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DB040_MONKEYPOX"
               },
               "7": {
                 "template": "BeCvngzId4a",
                 "name": "Cluster of SARI/SARS/HINI (Swine Flu) /Influenza due to new subtype",
-                "conditionType": "DJ090_SARIS",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DJ090_SARIS"
               },
               "8": {
                 "template": "yw3vH8pTUHv",
                 "name": "Plague",
-                "conditionType": "DA200_PLAGUE",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DA200_PLAGUE"
               },
               "9": {
                 "template": "tyPHPkoqJ3T",
                 "name": "Acute Haemorrhagic Fever",
-                "conditionType": "DA910_VHF",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DA910_VHF"
               },
               "10": {
                 "template": "j7HgQFDaPJ2",
                 "name": "Neonatal Tetanus",
-                "conditionType": "DA330_NNT",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DA330_NNT"
               },
               "11": {
                 "template": "NAL4BEZQlYo",
                 "name": "Typhoid fever",
-                "conditionType": "DA010_TYPHOID",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DA010_TYPHOID"
               },
               "12": {
                 "template": "owgiOiUZVUE",
                 "name": "Bacterial Meningitis",
-                "conditionType": "DG009_BACTMENING",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DG009_BACTMENING"
               },
               "13": {
                 "template": "dSnYPuJ9VTM",
                 "name": "Measles",
-                "conditionType": "DB050_MEASLES",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DB050_MEASLES"
               },
               "14": {
                 "template": "vuzpod063ok",
                 "name": "Acute Respiratory Illness",
-                "conditionType": "DA499_ARI",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DA499_ARI"
               },
               "15": {
                 "template": "tyPHPkoqJ3T",
                 "name": "Acute Viral Haemorrhagic Fever",
-                "conditionType": "DA910_VHF",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DA910_VHF"
               },
               "16": {
                 "template": "paRlx2CUZgN",
                 "name": "Yellow Fever",
-                "conditionType": "DA950_YFEVER",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DA950_YFEVER"
               },
               "17": {
                 "template": "I9ekye3NIWq",
                 "name": "Zika Fever",
-                "conditionType": "DA928_ZIKA",
-                "userGroup": "v9SiKycT0np"
+                "conditionType": "DA928_ZIKA"
               }
             }
           },
@@ -181,7 +164,7 @@
       "uri": "https://training.dhis.hisp.org/zm-idsr/api",
       "name": "Zambia IDSR",
       "credentials": {
-        "token": "d2pat_YWb9rt9Fie8DklyS8IpbffOTI3Nogccd2823633364",
+        "token": "d2pat_j01mWdS1JxSunjRyeQcp1nwXE0okDT9P3855379240",
         "expiry": "2023-06-19T14:48:00.000Z"
       },
       "endpoints": {
@@ -196,6 +179,7 @@
         "updateUserGroup": 9,
         "pathogenOptionSet":10,
         "labTestResultOptionSet":11,
+        "orgUnitUserInfo": 12,
         "props": {
           "1": { "path": "/me.json" },
           "2": { "path": "/userGroups.json" },
@@ -235,6 +219,10 @@
           "11": {
             "path": "/optionSets/EwcdgVh7sdS.json?fields=id,name,options[id,code,name]",
             "data": []
+          },
+          "12": {
+            "path": "/organisationUnits/{id}.json?fields=id,code,name,users[id,username,telegram]",
+            "placeholder": "{id}"
           }
         }
       }
