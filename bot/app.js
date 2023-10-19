@@ -282,6 +282,9 @@ exports.registerUser = function (telegramID, userProfile) {
       .then(function (data) {
         console.log('Update result : ' + JSON.stringify(data.data))
       })
+      .catch(function (error) {
+        console.log('Server error : ' + error)
+      })
   }
   catch (error) {
     console.log('Patch error')
@@ -306,6 +309,9 @@ exports.unregisterUser = function (userSession) {
     axios.put(queryUrl, payload)
       .then(function (data) {
         console.log('Update result : ' + JSON.stringify(data.data))
+      })
+      .catch(function (error) {
+        console.log('Server Error : ' + error)
       })
   }
   catch (error) {

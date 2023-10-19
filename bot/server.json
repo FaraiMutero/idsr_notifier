@@ -1,7 +1,5 @@
 {
   "env": {
-    "prod": true,
-    "mode": "dev",
     "bot": {
       "prod":{
         "handle": "eIDSRZambiaBot",
@@ -26,7 +24,7 @@
             "1": { "value": "gr3uWZVzPQT" },
             "2": { "value": "ENROLLMENT_ID" },
             "3": { "value": "iSIhKjnlMkv" },
-            "4": { "value": "v9SiKycT0np" },
+            "4": { "value": "nlpwFai4iM5" },
             "5": { "value": "rDhT93j2dah" },
             "6" : { "value": "PROGRAM_STAGE_ID"},
             "7" : { "value": "ORG_UNIT_NAME"}
@@ -53,87 +51,87 @@
             "priority-conditions-zika": 17,
             "props": {
               "1": {
-                "template": "KFHbscgZeEh",
+                "template": "T2xvOYTI9Sz",
                 "name": "COVID-19 Alert notification",
                 "conditionType": "DU071_COVID19"
               },
               "2": {
-                "template": "fxDj7kBWKwD",
+                "template": "w1P7sRj9ak7",
                 "name": "Acute Flaccid Paralysis Alert notification",
                 "conditionType": "DA850_AFP"
               },
               "3": {
-                "template": "pscEZVhW5Ty",
+                "template": "v7RoqyEe0wz",
                 "name": "Anthrax Alert notification",
                 "conditionType": "DA034_ANTHRAX"
               },
               "4": {
-                "template": "TwU1gUoejwS",
+                "template": "kucoixCC0YE",
                 "name": "Cholera Alert notification",
                 "conditionType": "DA000_CHOLERA"
               },
               "5": {
-                "template": "uWTM4iQRUZk",
+                "template": "KULIcWsSHbV",
                 "name": "Diarrhoea with blood (Shigella) Alert notification",
                 "conditionType": "DA069_DIARR_BLOOD"
               },
               "6": {
-                "template": "z9GYDlgiEh8",
+                "template": "c2ZIUO7vFC1",
                 "name": "Monkeypox",
                 "conditionType": "DB040_MONKEYPOX"
               },
               "7": {
-                "template": "BeCvngzId4a",
+                "template": "kMV5HFcsISC",
                 "name": "Cluster of SARI/SARS/HINI (Swine Flu) /Influenza due to new subtype",
                 "conditionType": "DJ090_SARIS"
               },
               "8": {
-                "template": "yw3vH8pTUHv",
+                "template": "hPFfuaq7GsA",
                 "name": "Plague",
                 "conditionType": "DA200_PLAGUE"
               },
               "9": {
-                "template": "tyPHPkoqJ3T",
+                "template": "cOzqARueyh4",
                 "name": "Acute Haemorrhagic Fever",
                 "conditionType": "DA910_VHF"
               },
               "10": {
-                "template": "j7HgQFDaPJ2",
+                "template": "Gegq8jPCbWf",
                 "name": "Neonatal Tetanus",
                 "conditionType": "DA330_NNT"
               },
               "11": {
-                "template": "NAL4BEZQlYo",
+                "template": "CTVD1Mr8sCU",
                 "name": "Typhoid fever",
                 "conditionType": "DA010_TYPHOID"
               },
               "12": {
-                "template": "owgiOiUZVUE",
+                "template": "",
                 "name": "Bacterial Meningitis",
                 "conditionType": "DG009_BACTMENING"
               },
               "13": {
-                "template": "dSnYPuJ9VTM",
+                "template": "ZIYrkR4MGm6",
                 "name": "Measles",
                 "conditionType": "DB050_MEASLES"
               },
               "14": {
-                "template": "vuzpod063ok",
+                "template": "s7chFCmnhFh",
                 "name": "Acute Respiratory Illness",
                 "conditionType": "DA499_ARI"
               },
               "15": {
-                "template": "tyPHPkoqJ3T",
+                "template": "cOzqARueyh4",
                 "name": "Acute Viral Haemorrhagic Fever",
                 "conditionType": "DA910_VHF"
               },
               "16": {
-                "template": "paRlx2CUZgN",
+                "template": "xtKK6MMDhYm",
                 "name": "Yellow Fever",
                 "conditionType": "DA950_YFEVER"
               },
               "17": {
-                "template": "I9ekye3NIWq",
+                "template": "cR21htvhp4U",
                 "name": "Zika Fever",
                 "conditionType": "DA928_ZIKA"
               }
@@ -164,7 +162,7 @@
       "uri": "https://training.dhis.hisp.org/zm-idsr/api",
       "name": "Zambia IDSR",
       "credentials": {
-        "token": "d2pat_j01mWdS1JxSunjRyeQcp1nwXE0okDT9P3855379240",
+        "token": "d2pat_NGwNRDdnkKonhlaGWv7SihMpvOtasqkU3190693841",
         "expiry": "2023-06-19T14:48:00.000Z"
       },
       "endpoints": {
