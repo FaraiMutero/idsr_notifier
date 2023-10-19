@@ -1,7 +1,5 @@
 {
   "env": {
-    "prod": false,
-    "mode": "dev",
     "bot": {
       "prod":{
         "handle": "eIDSRZambiaBot",
