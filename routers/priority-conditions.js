@@ -92,6 +92,9 @@ router.post('/', function (req, res) {
                 })
             }
         })
+        .catch(function(error){
+            console.log('Error : ' + error)
+        })
         apiResponse = '{"status": "OK", "result": "Notification successfully sent"}'
     }
     else
